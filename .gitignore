@@ -9,7 +9,7 @@
 .history
 .svn/
 migrate_working_dir/
-
+.env*
 # IntelliJ related
 *.iml
 *.ipr
@@ -31,7 +31,7 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
-
+**/android/app/src/main/res/mipmap*/
 # Symbolication related
 app.*.symbols
 
