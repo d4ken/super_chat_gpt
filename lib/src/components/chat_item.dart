@@ -19,7 +19,7 @@ class ChatItem extends StatelessWidget {
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
       controller: scrollController,
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       itemBuilder: (context, index) {
         var conversation = conversations[index];
         return Align(

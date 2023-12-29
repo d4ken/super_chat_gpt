@@ -46,11 +46,11 @@ class ChatScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Expanded(
+                const Expanded(
                   child: TabBarView(children: [
-                    const SettingTab(),
+                    SettingTab(),
                     ChatTab(),
-                    const FavTab(),
+                    FavTab(),
                   ]),
                 )
               ],
