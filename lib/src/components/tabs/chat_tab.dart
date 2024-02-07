@@ -28,7 +28,7 @@ class _ChatTabState extends State<ChatTab> {
   void initState() {
     openAI = OpenAI.instance.build(
         token: dotenv.get('OPENAI_API_KEY'),
-        baseOption: HttpSetup(receiveTimeout: const Duration(seconds: 30)));
+        baseOption: HttpSetup(receiveTimeout: const Duration(seconds: 20)));
     super.initState();
   }
 
@@ -51,7 +51,7 @@ class _ChatTabState extends State<ChatTab> {
         request: ChatCompleteText(
             messages: _messageHistory,
             maxToken: 400,
-            model: GptTurbo0631Model()));
+            model: GptTurboChatModel()));
 
     if (response != null && response.choices.isNotEmpty) {
       setState(() {
